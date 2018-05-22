@@ -1,3 +1,6 @@
+import org.flywaydb.gradle.FlywayExtension
+import org.flywaydb.gradle.task.FlywayMigrateTask
+
 buildscript {
     dependencies {
         classpath "mysql:mysql-connector-java:$mysqlVersion"
@@ -13,3 +16,13 @@ flyway {
     user = "root"
     outOfOrder = false
 }
+
+task cfMigrate(type: FlywayMigrateTask) {
+    extension = new FlywayExtension(
+            url: "https://10.0.8.18:3306/cf_88d48ead_3381_4eed_a73f_0daed983f8d9",
+            user: "mz00wX6B5IZfsJbR",
+            password: "650ajll8gpW8YG4n",
+            outOfOrder: false
+    )
+}
+
