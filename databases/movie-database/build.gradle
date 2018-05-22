@@ -19,7 +19,7 @@ flyway {
 
 task cfMigrate(type: FlywayMigrateTask) {
     extension = new FlywayExtension(
-            url: "https://10.0.8.18:3306/cf_cb2372d7_f626_4dcd_a3b9_87d17695e03b",
+            url: "jdbc:mysql://10.0.8.18:3306/cf_cb2372d7_f626_4dcd_a3b9_87d17695e03b",
             user: "fz4fjAvMtCMlwvNx",
             password: "UnzOBQMCFwOiGZuP",
             outOfOrder: false
